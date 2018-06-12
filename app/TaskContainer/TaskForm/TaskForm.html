@@ -1,0 +1,18 @@
+<div class="fade-in animate-first">
+  <form name="taskForm" ng-submit="formController.addItem( taskForm.$valid )">
+    <label>Type of Task</label>
+    <select required ng-model="formController.selectedTask.type" ng-options="type as type.name for type in formController.taskTypes">
+    </select>
+    <label>Task Name</label>
+    <input required placeholder="Enter task name..." type="text" maxlength="25" ng-model="formController.selectedTask.name">
+
+    <label>Task Description</label>
+    <textarea required placeholder="Please enter a description..." class="TaskForm__text-area" ng-model="formController.selectedTask.desc">
+      </textarea>
+
+    <input type="submit" class="submit-button button" value="{{formController.selectedTask.id ? 'Save' : 'Add'}}" />
+    <button class="alert button" ng-disabled="!formController.selectedTask.id" ng-click="formController.deleteItem()" type="button">Delete</button>
+    <button class="button" ng-disabled="!formController.selectedTask.name || !formController.selectedTask.desc" ng-click="formController.clearItem()"
+      type="button">Clear</button>
+  </form>
+</div>

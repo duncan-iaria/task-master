@@ -1,0 +1,18 @@
+@media only screen and (max-width: 768px) {
+  .TaskContainer__wrapper {
+    width: 100%;
+    display: flex;
+  }
+
+  .TaskContainer__content {
+    flex-direction: column;
+  }
+
+  .TaskForm__wrapper {
+    order: 2;
+  }
+
+  .TaskList__wrapper {
+    order: 1;
+  }
+}

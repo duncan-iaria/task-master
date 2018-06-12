@@ -1,0 +1,5 @@
+<div class="fade-in animate-second">
+  <label>Your Current Tasks:</label>
+  <div class="TaskList__status" ng-show="!listController.items.length">No Tasks to Display</div>
+  <task-list-item ng-repeat="item in listController.items" item="item" on-select-item="listController.selectTask(item)"></task-list-item>
+</div>
