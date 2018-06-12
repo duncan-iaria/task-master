@@ -15,4 +15,18 @@
   .TaskList__wrapper {
     order: 1;
   }
+
+  .button__wrapper {
+    flex-direction: column;
+  }
+
+  .button,
+  .submit-button {
+    flex: 1;
+    margin-bottom: 4px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
 }

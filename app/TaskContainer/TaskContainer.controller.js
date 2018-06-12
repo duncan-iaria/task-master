@@ -15,24 +15,26 @@ export function TaskContainerController($modal) {
   controller.taskTypes = TASK_TYPES;
   controller.taskData = [];
   controller.selectedTask = { ...taskModel };
-  controller.addTask = addTask;
-  controller.deleteTask = deleteTask;
+  controller.onUpdateTask = onUpdateTask;
   controller.onDeleteTask = onDeleteTask;
   controller.setSelectedTask = setSelectedTask;
   controller.resetSelectedTask = resetSelectedTask;
 
-  function addTask(task) {
+  function onUpdateTask(task) {
     if (task.id) {
       updateTask(task);
     } else {
-      task.dateOfBirth = moment().format('h:m A [on] MMM D, YYYY');
-      task.id = controller.generatedId;
-      controller.taskData = [...controller.taskData, task];
-
-      controller.generatedId++;
+      addTask(task);
     }
 
     resetSelectedTask();
+  }
+
+  function addTask(task) {
+    task.dateOfBirth = moment().format('h:m A [on] MMM D, YYYY');
+    task.id = controller.generatedId;
+    controller.taskData = [...controller.taskData, task];
+    controller.generatedId++;
   }
 
   function updateTask(task) {
@@ -68,12 +70,12 @@ export function TaskContainerController($modal) {
     resetSelectedTask();
   }
 
-  function setSelectedTask(task) {
-    controller.selectedTask = { ...task };
-  }
-
   function resetSelectedTask() {
     controller.selectedTask = { ...taskModel };
+  }
+
+  function setSelectedTask(task) {
+    controller.selectedTask = { ...task };
   }
 }
 

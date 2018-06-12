@@ -10,9 +10,11 @@
     <textarea required placeholder="Please enter a description..." class="TaskForm__text-area" ng-model="formController.selectedTask.desc">
       </textarea>
 
-    <input type="submit" class="submit-button button" value="{{formController.selectedTask.id ? 'Save' : 'Add'}}" />
-    <button class="alert button" ng-disabled="!formController.selectedTask.id" ng-click="formController.deleteItem()" type="button">Delete</button>
-    <button class="button" ng-disabled="!formController.selectedTask.name || !formController.selectedTask.desc" ng-click="formController.clearItem()"
-      type="button">Clear</button>
+    <div class="button__wrapper">
+      <input type="submit" class="submit-button button" value="{{formController.selectedTask.id ? 'Save' : 'Add'}}" />
+      <button class="alert button" ng-disabled="!formController.selectedTask.id" ng-click="formController.deleteItem()" type="button">Delete</button>
+      <button class="button" ng-disabled="!formController.selectedTask.name || !formController.selectedTask.desc" ng-click="formController.clearItem()"
+        type="button">Clear</button>
+    </div>
   </form>
 </div>

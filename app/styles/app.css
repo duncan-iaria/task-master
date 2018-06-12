@@ -38,11 +38,7 @@ body {
   flex: 1;
 }
 
-.TaskForm__wrapper {
-  padding: 24px;
-  flex: 1;
-}
-
+.TaskForm__wrapper,
 .TaskList__wrapper {
   padding: 24px;
   flex: 1;
@@ -88,8 +84,14 @@ body {
   height: 100px;
 }
 
+.button__wrapper {
+  display: flex;
+  flex: 1;
+}
+
 .button {
   border-radius: 6px;
+  margin-right: 6px;
 }
 
 .submit-button {

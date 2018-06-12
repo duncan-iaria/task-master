@@ -4,6 +4,6 @@
 <div class="TaskContainer__spacer"></div>
 <div class="TaskContainer__content">
   <task-form class="TaskForm__wrapper" task-types="taskController.taskTypes" selected-task="taskController.selectedTask" on-delete="taskController.onDeleteTask(task)"
-    on-add="taskController.addTask(task)" on-clear="taskController.resetSelectedTask()"></task-form>
+    on-add="taskController.onUpdateTask(task)" on-clear="taskController.resetSelectedTask()"></task-form>
   <task-list items="taskController.taskData" on-set-selected="taskController.setSelectedTask(item)" class="TaskList__wrapper"></task-list>
 </div>
