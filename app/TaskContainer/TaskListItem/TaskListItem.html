@@ -1,4 +1,4 @@
 <div class="Item__wrapper" ng-class="{'bug-text': itemController.item.type.id === 1}" ng-click="itemController.select()">
-  <div class="Item__name">{{ itemController.item.name }}</div>
-  <div class="Item__date">Created {{itemController.item.dateOfBirth}}</div>
+  <div class="Item__name">{{ itemController.index }}. {{ itemController.item.name }}</div>
+  <div class="Item__date">Created {{ itemController.item.dateOfBirth }}</div>
 </div>

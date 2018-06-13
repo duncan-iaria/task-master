@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const env = process.env.NODE_ENV;
 
 module.exports = {
   entry: './app/app.js',
@@ -13,6 +14,8 @@ module.exports = {
   devServer: {
     contentBase: './app',
   },
+
+  mode: env || 'development',
 
   module: {
     rules: [

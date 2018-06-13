@@ -6,6 +6,7 @@ export const TaskListItem = {
   controllerAs: 'itemController',
   bindings: {
     item: '<',
+    index: '<',
     onSelectItem: '&',
   },
 };
